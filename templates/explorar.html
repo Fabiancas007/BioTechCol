@@ -1,0 +1,124 @@
+{% extends '_base.html' %}
+
+{% block title %}Explorar{% endblock %}
+
+{% block main %}
+<main>
+  <h1 class="titulo">Explorar</h1>
+  <section id="mapa" class="mapas__contenedor">
+    <div class="mapas__item">
+      <h2 class="titulo">Boyacá</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d854993.7673014384!2d-73.45543762085141!3d5.456828700241649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69a475f890a283%3A0xffe1255b64bc9ff7!2zQm95YWPDoQ!5e0!3m2!1ses-419!2sco!4v1722915411902!5m2!1ses-419!2sco"
+        width="100%" height="85%" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Imagen superpuesta -->
+      <img src="{{url_for('static',filename='img/camaleon-IA.webp')}}" alt="Imagen de Boyacá"
+        style="position: absolute; top: 10px; right: 10px; width: 100px; height: auto;" />
+    </div>
+
+    <div class="mapas__item ">
+      <h2 class="titulo">Cundinamarca</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1017855.5049233857!2d-74.41279376971033!3d4.770287211693583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f28eb1616af2b%3A0x933cbcb5fad108ed!2sCundinamarca!5e0!3m2!1ses-419!2sco!4v1722915458160!5m2!1ses-419!2sco"
+        width="100%" height="85%" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img src="{{url_for('static',filename='img/colibri-IA.webp')}}" alt="Imagen de Cundinamarca"
+        style="position: absolute; top: 10px; right: 10px; width: 100px; height: auto;" />
+    </div>
+  </section>
+
+  <section id="lugares">
+    <h2 class="titulo">Lugares Turísticos</h2>
+    <h4 class="titulo">Boyaca</h4>
+    <div class="container_card">
+      <div class="card">
+        <img src="{{url_for('static',filename='img/1.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo">Glaciar de Suramérica </h5>
+        <p class="tit">Extiende sus hermosas alas esta majestuosa ave y se dispone a planear sobre las cerca de 25
+          perlas montañosas
+          de mayor masa glaciar de Suramérica ubicada entre los departamentos de Boyacá y Arauca. ubicacion:
+          Departamento: Boyacá, Colombia.
+          Región: Cordillera Oriental.
+          Municipios: Pisba, Mongua, Tasco, Socha y Socotá (Boyacá); Támara (Casanare).</p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/2.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo"> Parque Nacional Natural</h5>
+        <p class="tit">El Parque Nacional Natural Pisba es un tesoro natural de Colombia, con una rica biodiversidad y
+          paisajes
+          impresionantes.
+          Imagina perderte en un paraíso de montañas nevadas, bosques nublados y lagunas cristalinas.
+          Ubicación:
+          Departamento: Boyacá, Colombia.
+          Región: Cordillera Oriental.
+          Municipios: Pisba, Mongua, Tasco, Socha y Socotá (Boyacá); Támara (Casanare).</p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/3.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo">Santuario de Flora y Fauna Iguaque</h5>
+        <p class="tit">Iguaqué: Un pedacito de paraíso en la tierra
+          Imagina sumergirte en un mundo mágico, donde la naturaleza se despliega en todo su esplendor. El Santuario de
+          Iguaqué te invita a descubrir un lugar sagrado para los muiscas, lleno de historia, leyendas y una belleza
+          natural que te dejará sin aliento.
+        </p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/4.jpeg')}}" class="d-block" alt="..." />
+        <h5 class="titulo">Los senderos de los Tibas</h5>
+        <p class="tit">"Los senderos de los Tibas recorren los antiguos caminos precolombinos, donde la naturaleza se
+          entrelaza con
+          la historia de los ancestros. Estos senderos serpentean a través de imponentes montañas cubiertas de neblina,
+          llevando al visitante por bosques de niebla, cañones profundos y miradores que revelan paisajes vírgenes. Cada
+          paso conecta con la herencia cultural de los Tibas, mientras el sonido de las aves y el viento acompañan el
+          recorrido.
+
+          Ubicación:
+          Departamento: Boyacá, Colombia.
+          Región: Cordillera Oriental.
+          Municipios: Chiscas, Panqueba, Guacamayas, El Cocuy."</p>
+      </div>
+    </div>
+    <h4 class="titulo">Cundinamarca</h4>
+    <div class="container_card">
+      <div class="card">
+        <img src="{{url_for('static',filename='img/5.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo">Parque Nacional Natural Chingaza</h5>
+            <p class="tit">Imagina sumergirte en un mundo mágico, donde la naturaleza se despliega en todo su esplendor.
+              El Parque Nacional Natural Chingaza te invita a descubrir un lugar sagrado para los muiscas, lleno de
+              historia, leyendas y una belleza natural que te dejará sin aliento.Dirección: La Calera,
+              Cundinamarca,Colombia.</p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/6.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo">Parque Nacional Natural Sumapaz</h5>
+            <p class="tit">Imagina sumergirte en un mundo mágico, donde la naturaleza se despliega en todo su esplendor.
+              El Parque Nacional Natural Sumapaz te invita a descubrir el páramo más extenso del planeta, un lugar
+              sagrado lleno de historia, leyendas y una belleza natural que te dejará sin aliento.
+              direccion: Bogotá, Colombia. Está ubicado entre la cordillera
+              Oriental y el piedemonte llanero, y es uno
+              de los principales ecosistemas de páramo
+              que existen en el país</p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/7.jpg')}}" class="d-block" alt="..." />
+        <h5 class="titulo"> Parque Natural Chicaque</h5>
+            <p class="tit">El Parque Natural Chicaque es un verdadero tesoro natural ubicado al suroccidente de la
+              sabana de Bogotá, Colombia. Este bosque de niebla, con más de 300 hectáreas, es un refugio para una gran
+              diversidad de flora y fauna, y un lugar perfecto para escapar del bullicio de la ciudad y conectar
+              con la naturaleza.</p>
+      </div>
+      <div class="card">
+        <img src="{{url_for('static',filename='img/8.jpeg')}}" class="d-block" alt="..." />
+        <h5 class="titulo"> Lagunas de Siecha</h5>
+            <p class="tit">Las Lagunas de Siecha, rodeadas de un impresionante paisaje montañoso, se encuentran dentro
+              del majestuoso Parque Nacional Natural Chingaza. Este conjunto de lagunas refleja la pureza de la
+              naturaleza andina, siendo un lugar sagrado para los antiguos muiscas. En sus aguas cristalinas y paisajes
+              místicos, los visitantes pueden disfrutar de la serenidad y conexión con la naturaleza. Ubicación:
+              Departamento: Cundinamarca, Colombia.
+              Región: Cordillera Oriental.
+              Municipios: Guasca.</p>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

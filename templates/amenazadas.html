@@ -1,0 +1,44 @@
+{% extends '_base.html' %}
+
+{% block title %}Biodiversidad{% endblock %}
+
+{% block main %}
+<main>
+    <h1 class="titulo">Cifras de especies amenazadas a nivel nacional</h1>
+    <form action="">
+        <div>
+            <label for="departamento">Departamento:</label>
+            <select id="departamento">
+                <option value="">Todos</option>
+                <option value="Boyacá">Boyacá</option>
+                <option value="Cundinamarca">Cundinamarca</option>
+            </select>
+        </div>
+        <div>
+            <label for="reino">Grupo biológico</label>
+            <select id="reino">
+                <option value="">Todos</option>
+                <option value="Animal">Animal</option>
+                <option value="Planta">Planta</option>
+                <option value="Hongo">Hongo</option>
+            </select>
+        </div>
+        <div>
+            <label for="limite">Mostrar primeras:</label>
+            <select id="limite">
+                <option value="5">5 especies</option>
+                <option value="10">10 especies</option>
+                <option value="15">15 especies</option>
+            </select>
+        </div>
+    </form>
+    <div class="canvas">
+        <div class="contenedor-item"><canvas id="barChart"></canvas></div>
+        <div class="contenedor-item"><canvas id="pieChart"></canvas></div>
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{url_for('static',filename='js/graficos.js')}}"></script>
+{% endblock %}

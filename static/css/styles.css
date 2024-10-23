@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Colores usados en la página */
+  --main-color: #344e41;
+  --secondary-color: #dbddb4;
+  --accent-color: #88b8a9;
+  /* --background-color: #588157; */
+  --background-color: #344e41;
+  /* --text-color: #DAD7CD; */
+  --text-color: #dbddb4;
+
+  --fuente-monserrat: "Monserrat", sans serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 10px;
+  color: var(--main-color);
+  text-align: center;
+}
+p {
+  hyphens: auto;
+}
+.ull li a {
+  color: var(--text-color);
+}
+
+.ull li a:hover {
+  color: var(--accent-color);
+}
+
+/* Correción en el tamaño de las imágenes */
+.carousel-item img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* Sección de información */
+
+.presentacion {
+  font-family: var(--fuente-monserrat);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.presentacion > div {
+  margin: 10px;
+  max-width: 620px;
+}
+
+/* Sección de mapas interactivos */
+.mapas__contenedor {
+  margin-bottom: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mapas__item {
+  margin: 10px;
+  text-align: center;
+  width: 45vw;
+  min-width: 375px;
+  height: 45vh;
+  position: sticky;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+/* Sección de videos index.html */
+.videos {
+  margin: 20px 0;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* Aspect Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos de los formularios con select */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  width: 100%;
+  min-width: 180px;
+  max-width: 220px;
+}
+
+button.login-btn {
+  padding: 10px 20px;
+  min-width: 230px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #344e41 0%, #3472dc 100%);
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+button.login-btn:hover {
+  background: linear-gradient(45deg, #2575fc 0%, #344e41 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Seccion de tarjetas de biodiversidad */
+
+.container_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  /* Sombra inicial más intensa */
+  box-shadow: 0 12px 25px rgba(53, 149, 69, 0.9), 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  /* Sombra aún más intensa al hacer hover */
+  box-shadow: 0 20px 40px rgba(53, 149, 69, 1),
+    /* Sombra verde más fuerte */ 0 8px 20px rgba(0, 0, 0, 0.3);
+  /* Sombra negra más pronunciada */
+  transform: scale(1.05);
+  /* Hace que la tarjeta también se agrande ligeramente */
+}
+
+#lugares > div > div > p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.card img {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.card h2 {
+  color: #007bff;
+}
+
+.card p {
+  font-size: 1em;
+  color: #495057;
+}
+
+/* css de contacto */
+
+#contact{
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+.contact-form h2 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+}
+.contact-form p {
+  text-align: center;
+  color: #666;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: var(--accent-color)
+}
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 15px;
+  }
+  .contact-form h2 {
+    font-size: 20px;
+  }
+}
+.titulo {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: var(--background-color);
+}
+.tit {
+  font-family: "Times New Roman", Times, serif;
+  /* text-align: center; */
+  color: #000;
+  font-size: 24px; /* Ajusta el tamaño a lo que prefieras */
+}
+
+/* Gráficos de especies amenazadas */
+
+.canvas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.contenedor-item {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  min-width: 400px;
+}
+
+#barChart,
+#pieChart {
+  max-width: 1000px;
+  max-height: 500px;
+}
+
+@media (max-width: 768px) {
+  .presentacion > div {
+    max-width: none; /* Ancho completo en pantallas pequeñas */
+  }
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: none;
+  }
+  select {
+    max-width: none; /* Ancho completo en pantallas pequeñas */
+  }
+  #contacto {
+    padding: 20px;
+  }
+  #contacto h2 {
+    font-size: 24px;
+  }
+  #contacto p {
+    font-size: 16px;
+  }
+  #contacto li {
+    font-size: 16px;
+  }
+}

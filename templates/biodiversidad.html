@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+
+{% block title %}Biodiversidad{% endblock %}
+
+{% block main %}
+<main>
+  <h1 class="titulo">Fauna y flora </h1>
+  <form method="GET" action="{{ url_for('ir_a_biodiversidad') }}">
+    <div>
+      <label for="departamento">Departamento:</label>
+      <select name="departamento" id="departamento">
+        <option value="">Boyacá y Cundinamarca</option>
+        <option value="Boyacá">Boyacá</option>
+        <option value="Cundinamarca">Cundinamarca</option>
+      </select>
+    </div>
+    <div>
+      <label for="clase">Grupo biólogico:</label>
+      <select name="clase" id="clase">
+        <option value="">Todos</option>
+        <option value="Animales">Animales</option>
+        <option value="Protozoarios">Protozoarios</option>
+        <option value="Plantas">Plantas</option>
+        <option value="Hongos">Hongos</option>
+        <option value="Algas pardas y parientes">Algas</option>
+      </select>
+    </div>
+    <div>
+      <label for="tipo">Tipo:</label>
+      <select name="tipo" id="tipo">
+        <option value="">Todos</option>
+        <option value="Nativa">Nativa</option>
+        <option value="Endémica">Endémica</option>
+        <option value="Introducida">Introducida</option>
+      </select>
+    </div>
+
+    <button type="submit" class="login-btn">Filtrar</button>
+  </form>
+
+  <!-- Tarjetas de imágenes -->
+  <div class="container_card">
+    {% for dato in datos %}
+    <div class="card">
+      {% set imagen = dato['ICONO'] if dato['IMAGEN'] == 'No disponible' else dato['IMAGEN'] %}
+      <img src="{{ imagen }}" alt="{{ dato['NOMBRE'] }}">
+      {% if dato['NOMBRE'] == 'No disponible' %}
+      <h2><em>{{ dato['NOMBRE CIENTÍFICO'] }}</em></h2>
+      <p><strong>Departamento:</strong> {{ dato['DEPARTAMENTO'] }}</p>
+      <p><strong>Tipo de especie:</strong> {{ dato['TIPO'] }}</p>
+      {% else %}
+      <h2><em>{{ dato['NOMBRE CIENTÍFICO'] }}</em></h2>
+      <p><strong>Nombre Científico: </strong><em>{{ dato['NOMBRE CIENTÍFICO'] }}</em></p>
+      <p><strong>Departamento:</strong> {{ dato['DEPARTAMENTO'] }}</p>
+      <p><strong>Tipo de especie:</strong> {{ dato['TIPO'] }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}
